@@ -37,15 +37,16 @@ export function Features() {
   return (
     <section className="border-b border-slate-200 bg-slate-50">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-        <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           What students get
         </h2>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f) => (
             <div
               key={f.title}
-              className="rounded-lg border border-slate-200 bg-white p-6"
+              className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-indigo-300 hover:shadow-md"
             >
+              <div className="mb-3 h-1 w-8 rounded-full bg-indigo-500 transition group-hover:w-12" />
               <h3 className="font-semibold text-slate-900">{f.title}</h3>
               <p className="mt-2 text-sm text-slate-600">{f.body}</p>
             </div>

@@ -1,8 +1,8 @@
 export function Problem() {
   return (
-    <section className="border-b border-slate-200 bg-slate-50">
+    <section className="border-b border-slate-200 bg-indigo-50">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-        <h2 className="max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h2 className="max-w-3xl text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           Coordinators shouldn&apos;t be a human plan validator.
         </h2>
         <div className="mt-10 grid gap-8 sm:grid-cols-3">
@@ -20,7 +20,10 @@ export function Problem() {
               body: "Each plan lives in a PDF or Excel sheet on a student's laptop. No data, no patterns, no way to improve the programme.",
             },
           ].map((item) => (
-            <div key={item.title}>
+            <div
+              key={item.title}
+              className="rounded-lg border-l-4 border-indigo-500 bg-white px-6 py-5 shadow-sm"
+            >
               <h3 className="text-lg font-semibold text-slate-900">
                 {item.title}
               </h3>

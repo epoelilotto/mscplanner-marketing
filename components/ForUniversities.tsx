@@ -22,33 +22,33 @@ const CONTACT_MAILTO =
 
 export function ForUniversities() {
   return (
-    <section className="border-b border-slate-200">
+    <section className="border-b border-slate-200 bg-indigo-950">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
         <div className="grid gap-12 lg:grid-cols-[1fr_2fr] lg:gap-16">
           <div>
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               For universities
             </h2>
-            <p className="mt-4 text-slate-600">
+            <p className="mt-4 text-indigo-200">
               StudyPlanner is built to be deployed across programmes and
               institutions, not just one. If you coordinate an MSc and want
               fewer plan-validation emails next term, let&apos;s talk.
             </p>
             <a
               href={CONTACT_MAILTO}
-              className="mt-8 inline-flex items-center justify-center rounded-md bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
+              className="mt-8 inline-flex items-center justify-center rounded-md bg-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-900/50 transition hover:bg-indigo-400"
             >
               Email us
             </a>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-5 sm:grid-cols-2">
             {points.map((p) => (
               <div
                 key={p.title}
-                className="rounded-lg border border-slate-200 bg-slate-50 p-6"
+                className="rounded-xl border border-indigo-800 bg-indigo-900/60 p-6 backdrop-blur"
               >
-                <h3 className="font-semibold text-slate-900">{p.title}</h3>
-                <p className="mt-2 text-sm text-slate-600">{p.body}</p>
+                <h3 className="font-semibold text-indigo-100">{p.title}</h3>
+                <p className="mt-2 text-sm text-indigo-300">{p.body}</p>
               </div>
             ))}
           </div>

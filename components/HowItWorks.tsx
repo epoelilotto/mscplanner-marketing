@@ -25,7 +25,7 @@ export function HowItWorks() {
   return (
     <section className="border-b border-slate-200">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-        <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           How it works
         </h2>
         <p className="mt-4 max-w-2xl text-slate-600">
@@ -36,9 +36,9 @@ export function HowItWorks() {
           {steps.map((s) => (
             <li
               key={s.n}
-              className="rounded-lg border border-slate-200 bg-white p-6"
+              className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-indigo-100 transition hover:ring-indigo-300"
             >
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-900 text-sm font-semibold text-white">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-indigo-600 text-sm font-bold text-white shadow shadow-indigo-200">
                 {s.n}
               </div>
               <h3 className="mt-4 font-semibold text-slate-900">{s.title}</h3>
