@@ -17,6 +17,22 @@ export const metadata: Metadata = {
     description:
       "Real-time validated MSc study plans. Fewer coordinator emails, valid plans every time.",
     type: "website",
+    url: "https://studyplanner-marketing.vercel.app",
+    images: [
+      {
+        url: "https://studyplanner-marketing.vercel.app/screenshots/screenshot-3.png",
+        width: 1440,
+        height: 1153,
+        alt: "StudyPlanner — full plan view with live validation and AI",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "StudyPlanner — AI study planning for universities",
+    description:
+      "Real-time validated MSc study plans. Fewer coordinator emails, valid plans every time.",
+    images: ["https://studyplanner-marketing.vercel.app/screenshots/screenshot-3.png"],
   },
 };
 

@@ -37,10 +37,6 @@ export function Screenshots() {
   return (
     <section className="border-b border-slate-200">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-        <p className="mt-4 max-w-xl text-slate-600">
-          A fully working demo — open it, build a plan, and see validation in
-          action yourself.
-        </p>
         <div className="mt-12 flex flex-col gap-20">
           {screens.map((s) => (
             <figure
@@ -68,7 +64,8 @@ export function Screenshots() {
                   width={s.width}
                   height={s.height}
                   className="w-full"
-                  quality={95}
+                  quality={85}
+                  sizes="(max-width: 768px) 100vw, 75vw"
                   priority
                 />
               </div>
