@@ -1,0 +1,28 @@
+---
+import Base from "../layouts/Base.astro";
+import Navbar from "../components/Navbar.astro";
+import Screenshots from "../components/Screenshots.astro";
+
+const PLANNER_URL = "https://ae-planner-proxy.vercel.app";
+---
+
+<Base title="Demo — StudyPlanner" description="See StudyPlanner in action. Real screenshots from the live demo — try it yourself today.">
+  <Navbar />
+  <main class="flex-1 bg-slate-50">
+    <div class="mx-auto max-w-6xl px-6 pt-16 pb-4">
+      <h1 class="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">See it in action</h1>
+      <p class="mt-3 text-slate-600">A fully working demo — open it, build a plan, and see validation in action yourself.</p>
+    </div>
+    <Screenshots />
+    <div class="mx-auto max-w-6xl px-6 py-16 text-center">
+      <a
+        href={PLANNER_URL}
+        target="_blank"
+        rel="noreferrer"
+        class="inline-flex items-center justify-center rounded-md bg-indigo-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-200 transition hover:bg-indigo-500"
+      >
+        Try the live planner →
+      </a>
+    </div>
+  </main>
+</Base>

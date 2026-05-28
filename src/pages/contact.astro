@@ -1,0 +1,74 @@
+---
+import Base from "../layouts/Base.astro";
+import Navbar from "../components/Navbar.astro";
+
+const PLANNER_URL = "https://ae-planner-proxy.vercel.app";
+const CONTACT_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=Bringing%20StudyPlanner%20to%20our%20university";
+
+const blocks = [
+  {
+    title: "What we cover",
+    items: ["Live demo walkthrough", "How we encode your programme rules", "Branding and subdomain setup", "Timeline and effort estimate"],
+  },
+  {
+    title: "What you need",
+    items: ["Your MSc programme guide (PDF)", "30 minutes of your time", "No IT department involvement", "No budget commitment upfront"],
+  },
+];
+---
+
+<Base title="Contact — StudyPlanner" description="Get in touch to bring StudyPlanner to your university. Twenty-minute call, no commitment.">
+  <Navbar />
+  <main class="flex-1">
+    <div class="min-h-screen bg-indigo-950">
+      <div class="mx-auto max-w-3xl px-6 py-24 sm:py-32">
+        <div class="mb-8 h-1 w-16 rounded-full bg-indigo-500"></div>
+        <h1 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+          Bring StudyPlanner to your university.
+        </h1>
+        <p class="mt-6 text-lg text-slate-200">
+          Twenty-minute call. We'll walk through the live demo, show how the multi-tenant setup works, and scope what it would take for your programme.
+        </p>
+        <div class="mt-12 grid gap-6 sm:grid-cols-2">
+          {blocks.map((block) => (
+            <div class="rounded-xl border border-indigo-800 bg-indigo-900/60 p-6">
+              <h2 class="font-semibold text-indigo-100 mb-4">{block.title}</h2>
+              <ul class="space-y-2">
+                {block.items.map((item) => (
+                  <li class="flex items-start gap-2 text-sm text-slate-300">
+                    <span class="mt-0.5 h-4 w-4 shrink-0 rounded-full bg-indigo-500/30 flex items-center justify-center">
+                      <span class="h-1.5 w-1.5 rounded-full bg-indigo-400"></span>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <div class="mt-12 flex flex-wrap gap-4">
+          <a
+            href={CONTACT_MAILTO}
+            class="inline-flex items-center justify-center rounded-md bg-indigo-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-950 transition hover:bg-indigo-500"
+          >
+            Email us to schedule a call
+          </a>
+          <a
+            href={PLANNER_URL}
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex items-center justify-center rounded-md border border-slate-700 px-8 py-3 text-sm font-semibold text-white transition hover:border-indigo-500 hover:text-indigo-300"
+          >
+            Try the planner first →
+          </a>
+        </div>
+        <p class="mt-8 text-sm text-slate-400">
+          Or email directly:{" "}
+          <a href={CONTACT_MAILTO} class="underline underline-offset-2 hover:text-slate-200">
+            alessandromiccolo2003@gmail.com
+          </a>
+        </p>
+      </div>
+    </div>
+  </main>
+</Base>
