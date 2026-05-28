@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { headers } from "next/headers";
 
 const PLANNER_URL = "https://ae-planner-proxy.vercel.app";
 
@@ -10,13 +9,10 @@ const links = [
   { href: "/contact", label: "Contact" },
 ];
 
-export async function Navbar() {
-  const headersList = await headers();
-  const pathname = headersList.get("x-pathname") ?? "";
-
+export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-800 bg-indigo-950/95 backdrop-blur">
-      {/* Pure-CSS mobile toggle — the <input> must be a sibling of everything it controls */}
+      {/* Pure-CSS mobile toggle */}
       <input type="checkbox" id="nav-toggle" className="peer sr-only" />
 
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 h-16">
@@ -33,22 +29,15 @@ export async function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1">
-          {links.map((l) => {
-            const active = pathname === l.href;
-            return (
-              <Link
-                key={l.href}
-                href={l.href}
-                className={`rounded-md px-4 py-2 text-sm font-medium transition ${
-                  active
-                    ? "bg-indigo-800 text-white"
-                    : "text-indigo-200 hover:bg-indigo-900 hover:text-white"
-                }`}
-              >
-                {l.label}
-              </Link>
-            );
-          })}
+          {links.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="rounded-md px-4 py-2 text-sm font-medium text-indigo-200 transition hover:bg-indigo-900 hover:text-white"
+            >
+              {l.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Desktop CTA */}
@@ -67,19 +56,13 @@ export async function Navbar() {
           className="md:hidden flex cursor-pointer items-center rounded-md p-2 text-indigo-200 hover:bg-indigo-900 hover:text-white"
           aria-label="Toggle navigation menu"
         >
-          <svg
-            className="peer-checked:hidden h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
+          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </label>
       </div>
 
-      {/* Mobile menu — toggled via peer (peer = the checkbox above) */}
+      {/* Mobile menu */}
       <div className="hidden peer-checked:block md:hidden border-t border-slate-800 bg-indigo-950 px-4 pb-4 pt-2">
         {links.map((l) => (
           <Link
