@@ -45,7 +45,7 @@ export function Hero() {
           </a>
         </div>
         <p className="mt-6 text-sm text-slate-500">
-          Live today at TU Delft Aerospace Engineering · Multi-tenant ·
+          Live demo available · Multi-tenant ·
           Branded per institution
         </p>
       </div>

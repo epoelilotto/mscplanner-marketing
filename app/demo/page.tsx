@@ -3,7 +3,7 @@ import { Screenshots } from "@/components/Screenshots";
 export const metadata = {
   title: "Demo — StudyPlanner",
   description:
-    "See StudyPlanner in action. Real screenshots from the live planner at TU Delft Aerospace Engineering.",
+    "See StudyPlanner in action. Real screenshots from the live demo — try it yourself today.",
 };
 
 export default function DemoPage() {
@@ -14,8 +14,8 @@ export default function DemoPage() {
           See it in action
         </h1>
         <p className="mt-3 text-slate-600">
-          Live today at TU Delft Aerospace Engineering — used by MSc students
-          every term.
+          A fully working demo — open it, build a plan, and see validation
+          in action yourself.
         </p>
       </div>
       <Screenshots />

@@ -19,9 +19,9 @@ export default function ContactPage() {
           Bring StudyPlanner to your university.
         </h1>
         <p className="mt-6 text-lg text-indigo-200">
-          Twenty-minute call. We&apos;ll walk through the live TU Delft
-          deployment, show how the multi-tenant setup works, and scope what
-          it would take for your programme.
+          Twenty-minute call. We&apos;ll walk through the live demo,
+          show how the multi-tenant setup works, and scope what it would
+          take for your programme.
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -29,7 +29,7 @@ export default function ContactPage() {
             {
               title: "What we cover",
               items: [
-                "Live demo on ae-planner-proxy.vercel.app",
+                "Live demo walkthrough",
                 "How we encode your programme rules",
                 "Branding and subdomain setup",
                 "Timeline and effort estimate",

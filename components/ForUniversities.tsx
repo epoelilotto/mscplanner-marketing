@@ -1,7 +1,7 @@
 const points = [
   {
     title: "Multi-tenant from day one",
-    body: "Each university gets its own catalogue, rules, branding, and subdomain. Already running TU Delft Aerospace; POLIMI and TUM next.",
+    body: "Each university gets its own catalogue, rules, branding, and subdomain. Ready to deploy for your programme.",
   },
   {
     title: "Zero onboarding cost for students",

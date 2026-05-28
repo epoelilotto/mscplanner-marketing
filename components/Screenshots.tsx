@@ -4,7 +4,7 @@ const screens = [
   {
     src: "/screenshots/screenshot-1.png",
     alt: "StudyPlanner onboarding — MSc Aerospace Engineering landing page",
-    caption: "Branded per institution. TU Delft students land here today.",
+    caption: "Branded per institution. Live demo available to try today.",
   },
   {
     src: "/screenshots/screenshot-2.png",
@@ -28,7 +28,7 @@ export function Screenshots() {
           See it in action
         </h2>
         <p className="mt-4 max-w-xl text-slate-600">
-          Live today at TU Delft Aerospace Engineering.
+          Live demo available — try it today.
         </p>
         <div className="mt-12 grid gap-8 sm:grid-cols-3">
           {screens.map((s) => (
