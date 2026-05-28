@@ -16,7 +16,7 @@ export function Hero() {
         }}
       />
       <div className="relative mx-auto max-w-6xl px-6 pt-24 pb-28 sm:pt-32 sm:pb-36">
-        <div className="mb-6 inline-flex items-center rounded-full border border-indigo-500/40 bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-300">
+        <div className="mb-6 inline-flex items-center rounded-full border border-indigo-400/50 bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-200">
           For universities and programme coordinators
         </div>
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-6xl">
@@ -44,7 +44,7 @@ export function Hero() {
             Talk to us
           </a>
         </div>
-        <p className="mt-6 text-sm text-slate-500">
+        <p className="mt-6 text-sm text-slate-400">
           Live demo available · Multi-tenant ·
           Branded per institution
         </p>

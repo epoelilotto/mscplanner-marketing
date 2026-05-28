@@ -29,7 +29,7 @@ export function ForUniversities() {
             <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               For universities
             </h2>
-            <p className="mt-4 text-indigo-200">
+            <p className="mt-4 text-slate-200">
               StudyPlanner is built to be deployed across programmes and
               institutions, not just one. If you coordinate an MSc and want
               fewer plan-validation emails next term, let&apos;s talk.
@@ -48,7 +48,7 @@ export function ForUniversities() {
                 className="rounded-xl border border-indigo-800 bg-indigo-900/60 p-6 backdrop-blur"
               >
                 <h3 className="font-semibold text-indigo-100">{p.title}</h3>
-                <p className="mt-2 text-sm text-indigo-300">{p.body}</p>
+                <p className="mt-2 text-sm text-slate-200">{p.body}</p>
               </div>
             ))}
           </div>

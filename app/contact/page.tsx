@@ -18,7 +18,7 @@ export default function ContactPage() {
         <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
           Bring StudyPlanner to your university.
         </h1>
-        <p className="mt-6 text-lg text-indigo-200">
+        <p className="mt-6 text-lg text-slate-200">
           Twenty-minute call. We&apos;ll walk through the live demo,
           show how the multi-tenant setup works, and scope what it would
           take for your programme.
@@ -54,7 +54,7 @@ export default function ContactPage() {
               </h2>
               <ul className="space-y-2">
                 {block.items.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-indigo-300">
+                  <li key={item} className="flex items-start gap-2 text-sm text-slate-300">
                     <span className="mt-0.5 h-4 w-4 shrink-0 rounded-full bg-indigo-500/30 flex items-center justify-center">
                       <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
                     </span>
@@ -77,17 +77,17 @@ export default function ContactPage() {
             href={PLANNER_URL}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-md border border-slate-700 px-8 py-3 text-sm font-semibold text-white transition hover:border-indigo-500 hover:text-indigo-300"
+            className="inline-flex items-center justify-center rounded-md border border-slate-700 px-8 py-3 text-sm font-semibold text-white transition hover:border-indigo-500 hover:text-slate-300"
           >
             Try the planner first →
           </a>
         </div>
 
-        <p className="mt-8 text-sm text-indigo-400">
+        <p className="mt-8 text-sm text-slate-400">
           Or email directly:{" "}
           <a
             href={CONTACT_MAILTO}
-            className="underline underline-offset-2 hover:text-indigo-200"
+            className="underline underline-offset-2 hover:text-slate-200"
           >
             alessandromiccolo2003@gmail.com
           </a>

@@ -10,6 +10,7 @@ const screens = [
       "Students land on a programme-specific page. The planner loads the right catalogue, tracks, and rules automatically — no configuration needed on the student side.",
     width: 1440,
     height: 900,
+    priority: true,
   },
   {
     src: "/screenshots/screenshot-2.png",
@@ -20,6 +21,7 @@ const screens = [
       "Step 1: the student picks their specialisation. Mandatory courses pre-load instantly. The profile panel on the right shows sub-tracks to narrow elective recommendations.",
     width: 1440,
     height: 900,
+    priority: false,
   },
   {
     src: "/screenshots/screenshot-3.png",
@@ -30,6 +32,7 @@ const screens = [
       "The plan view: four quarters per year, real-time EC totals, prerequisite conflict flags, workload indicators, and an AI recommendation panel that analyses the student's profile against the full catalogue.",
     width: 1440,
     height: 1153,
+    priority: false,
   },
 ];
 
@@ -66,7 +69,8 @@ export function Screenshots() {
                   className="w-full"
                   quality={85}
                   sizes="(max-width: 768px) 100vw, 75vw"
-                  priority
+                  priority={s.priority}
+                  loading={s.priority ? "eager" : "lazy"}
                 />
               </div>
             </figure>
