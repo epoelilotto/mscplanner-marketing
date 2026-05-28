@@ -3,7 +3,7 @@ import Base from "../layouts/Base.astro";
 import Navbar from "../components/Navbar.astro";
 
 const PLANNER_URL = "https://ae-planner-proxy.vercel.app";
-const CONTACT_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=Bringing%20StudyPlanner%20to%20our%20university";
+const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=StudyPlanner%20Demo%20Request&body=University%20name%3A%0AProgramme%3A%0AYour%20role%3A";
 
 const blocks = [
   {
@@ -48,10 +48,10 @@ const blocks = [
         </div>
         <div class="mt-12 flex flex-wrap gap-4">
           <a
-            href={CONTACT_MAILTO}
+            href={DEMO_MAILTO}
             class="inline-flex items-center justify-center rounded-md bg-indigo-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-950 transition hover:bg-indigo-500"
           >
-            Email us to schedule a call
+            Book a 20-min demo
           </a>
           <a
             href={PLANNER_URL}
@@ -64,7 +64,7 @@ const blocks = [
         </div>
         <p class="mt-8 text-sm text-slate-400">
           Or email directly:{" "}
-          <a href={CONTACT_MAILTO} class="underline underline-offset-2 hover:text-slate-200">
+          <a href={DEMO_MAILTO} class="underline underline-offset-2 hover:text-slate-200">
             alessandromiccolo2003@gmail.com
           </a>
         </p>

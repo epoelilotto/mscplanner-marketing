@@ -1,5 +1,6 @@
 ---
 const PLANNER_URL = "https://ae-planner-proxy.vercel.app";
+const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=StudyPlanner%20Demo%20Request&body=University%20name%3A%0AProgramme%3A%0AYour%20role%3A";
 const pathname = Astro.url.pathname;
 const links = [
   { href: "/how-it-works", label: "How it works" },
@@ -36,15 +37,23 @@ const links = [
       ))}
     </nav>
 
-    <!-- Desktop CTA -->
-    <a
-      href={PLANNER_URL}
-      target="_blank"
-      rel="noreferrer"
-      class="hidden md:inline-flex items-center justify-center rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow shadow-indigo-900/50 transition hover:bg-indigo-500"
-    >
-      Open the StudyPlanner →
-    </a>
+    <!-- Desktop CTAs -->
+    <div class="hidden md:flex items-center gap-3">
+      <a
+        href={PLANNER_URL}
+        target="_blank"
+        rel="noreferrer"
+        class="text-sm font-medium text-indigo-200 transition hover:text-white"
+      >
+        Open demo →
+      </a>
+      <a
+        href={DEMO_MAILTO}
+        class="inline-flex items-center justify-center rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow shadow-indigo-900/50 transition hover:bg-indigo-500"
+      >
+        Book a demo
+      </a>
+    </div>
 
     <!-- Mobile hamburger label -->
     <label
@@ -69,10 +78,16 @@ const links = [
       </a>
     ))}
     <a
+      href={DEMO_MAILTO}
+      class="mt-3 block rounded-md bg-indigo-600 px-4 py-3 text-center text-sm font-semibold text-white hover:bg-indigo-500"
+    >
+      Book a demo
+    </a>
+    <a
       href={PLANNER_URL}
       target="_blank"
       rel="noreferrer"
-      class="mt-3 block rounded-md bg-indigo-600 px-4 py-3 text-center text-sm font-semibold text-white hover:bg-indigo-500"
+      class="mt-2 block rounded-md border border-slate-700 px-4 py-3 text-center text-sm font-medium text-indigo-200 hover:text-white"
     >
       Open the StudyPlanner →
     </a>
