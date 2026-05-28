@@ -29,7 +29,7 @@ const screens = [
     caption:
       "The plan view: four quarters per year, real-time EC totals, prerequisite conflict flags, workload indicators, and an AI recommendation panel that analyses the student's profile against the full catalogue.",
     width: 1440,
-    height: 900,
+    height: 1153,
   },
 ];
 
