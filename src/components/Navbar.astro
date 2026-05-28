@@ -1,12 +1,11 @@
 ---
 const PLANNER_URL = "https://ae-planner-proxy.vercel.app";
 const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=StudyPlanner%20Demo%20Request&body=University%20name%3A%0AProgramme%3A%0AYour%20role%3A";
-const pathname = Astro.url.pathname;
-const links = [
-  { href: "/how-it-works", label: "How it works" },
-  { href: "/universities", label: "For universities" },
-  { href: "/demo", label: "Demo" },
-  { href: "/contact", label: "Contact" },
+const navLinks = [
+  { href: "/#how-it-works", label: "How it works", external: false },
+  { href: "/#universities", label: "For universities", external: false },
+  { href: PLANNER_URL, label: "Demo", external: true },
+  { href: "/contact", label: "Contact", external: false },
 ];
 ---
 
@@ -23,37 +22,25 @@ const links = [
 
     <!-- Desktop nav -->
     <nav class="hidden md:flex items-center gap-1">
-      {links.map((l) => (
+      {navLinks.map((l) => (
         <a
           href={l.href}
-          class={`rounded-md px-4 py-2 text-sm font-medium transition ${
-            pathname === l.href || pathname === l.href + "/"
-              ? "bg-indigo-800 text-white"
-              : "text-indigo-200 hover:bg-indigo-900 hover:text-white"
-          }`}
+          target={l.external ? "_blank" : undefined}
+          rel={l.external ? "noreferrer" : undefined}
+          class="rounded-md px-4 py-2 text-sm font-medium text-indigo-200 transition hover:bg-indigo-900 hover:text-white"
         >
           {l.label}
         </a>
       ))}
     </nav>
 
-    <!-- Desktop CTAs -->
-    <div class="hidden md:flex items-center gap-3">
-      <a
-        href={PLANNER_URL}
-        target="_blank"
-        rel="noreferrer"
-        class="text-sm font-medium text-indigo-200 transition hover:text-white"
-      >
-        Open demo →
-      </a>
-      <a
-        href={DEMO_MAILTO}
-        class="inline-flex items-center justify-center rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow shadow-indigo-900/50 transition hover:bg-indigo-500"
-      >
-        Book a demo
-      </a>
-    </div>
+    <!-- Desktop CTA -->
+    <a
+      href={DEMO_MAILTO}
+      class="hidden md:inline-flex items-center justify-center rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow shadow-indigo-900/50 transition hover:bg-indigo-500"
+    >
+      Book a demo
+    </a>
 
     <!-- Mobile hamburger label -->
     <label
@@ -69,9 +56,11 @@ const links = [
 
   <!-- Mobile menu -->
   <div class="hidden peer-checked:block md:hidden border-t border-slate-800 bg-indigo-950 px-4 pb-4 pt-2">
-    {links.map((l) => (
+    {navLinks.map((l) => (
       <a
         href={l.href}
+        target={l.external ? "_blank" : undefined}
+        rel={l.external ? "noreferrer" : undefined}
         class="block rounded-md px-4 py-3 text-sm font-medium text-indigo-200 hover:bg-indigo-900 hover:text-white"
       >
         {l.label}

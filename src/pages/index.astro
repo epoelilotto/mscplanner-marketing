@@ -16,15 +16,15 @@ import CTAFooter from "../components/CTAFooter.astro";
 <Base>
   <Navbar />
   <main class="flex-1">
-    <Hero />
-    <Problem />
+    <div id="home"><Hero /></div>
+    <div id="problem"><Problem /></div>
     <Stats />
-    <HowItWorks />
+    <div id="how-it-works"><HowItWorks /></div>
     <Features />
-    <ForUniversities />
+    <div id="universities"><ForUniversities /></div>
     <CaseStudy />
-    <Screenshots />
-    <FAQ />
-    <CTAFooter />
+    <div id="demo"><Screenshots /></div>
+    <div id="faq"><FAQ /></div>
+    <div id="contact"><CTAFooter /></div>
   </main>
 </Base>
