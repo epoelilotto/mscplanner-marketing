@@ -1,6 +1,6 @@
 const PLANNER_URL = "https://ae-planner-proxy.vercel.app";
-const CONTACT_MAILTO =
-  "mailto:alessandromiccolo2003@gmail.com?subject=Bringing%20StudyPlanner%20to%20our%20university";
+const DEMO_MAILTO =
+  "mailto:alessandromiccolo2003@gmail.com?subject=StudyPlanner%20Demo%20Request&body=University%20name%3A%0AProgramme%3A%0AYour%20role%3A";
 
 export function CTAFooter() {
   return (
@@ -18,10 +18,10 @@ export function CTAFooter() {
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <a
-            href={CONTACT_MAILTO}
+            href={DEMO_MAILTO}
             className="inline-flex items-center justify-center rounded-md bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-950 transition hover:bg-indigo-500"
           >
-            Email us
+            Book a 20-min demo
           </a>
           <a
             href={PLANNER_URL}

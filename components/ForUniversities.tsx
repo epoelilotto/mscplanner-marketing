@@ -17,8 +17,8 @@ const points = [
   },
 ];
 
-const CONTACT_MAILTO =
-  "mailto:alessandromiccolo2003@gmail.com?subject=Bringing%20StudyPlanner%20to%20our%20university";
+const DEMO_MAILTO =
+  "mailto:alessandromiccolo2003@gmail.com?subject=StudyPlanner%20Demo%20Request&body=University%20name%3A%0AProgramme%3A%0AYour%20role%3A";
 
 export function ForUniversities() {
   return (
@@ -35,11 +35,25 @@ export function ForUniversities() {
               fewer plan-validation emails next term, let&apos;s talk.
             </p>
             <a
-              href={CONTACT_MAILTO}
+              href={DEMO_MAILTO}
               className="mt-8 inline-flex items-center justify-center rounded-md bg-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-900/50 transition hover:bg-indigo-400"
             >
-              Email us
+              Book a 20-min demo
             </a>
+            <div className="mt-8 rounded-lg border border-indigo-800 bg-indigo-900/40 px-5 py-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-indigo-300">
+                Data &amp; Privacy
+              </p>
+              <p className="mt-1 text-sm text-slate-300">
+                Student plans are stored locally in the browser by default. No
+                data leaves the student&apos;s machine unless they choose to
+                share. If shared, data is stored on EU infrastructure and never
+                used for training or shared with third parties.{" "}
+                <span className="font-medium text-indigo-200">
+                  GDPR-compliant by design.
+                </span>
+              </p>
+            </div>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             {points.map((p) => (

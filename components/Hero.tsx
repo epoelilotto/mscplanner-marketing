@@ -1,6 +1,6 @@
 const PLANNER_URL = "https://ae-planner-proxy.vercel.app";
-const CONTACT_MAILTO =
-  "mailto:alessandromiccolo2003@gmail.com?subject=Bringing%20StudyPlanner%20to%20our%20university";
+const DEMO_MAILTO =
+  "mailto:alessandromiccolo2003@gmail.com?subject=StudyPlanner%20Demo%20Request&body=University%20name%3A%0AProgramme%3A%0AYour%20role%3A";
 
 export function Hero() {
   return (
@@ -17,7 +17,7 @@ export function Hero() {
       />
       <div className="relative mx-auto max-w-6xl px-6 pt-24 pb-28 sm:pt-32 sm:pb-36">
         <div className="mb-6 inline-flex items-center rounded-full border border-indigo-400/50 bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-200">
-          For universities and programme coordinators
+          Stop validating study plans by hand.
         </div>
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-6xl">
           Valid study plans,{" "}
@@ -38,15 +38,14 @@ export function Hero() {
             Open the StudyPlanner →
           </a>
           <a
-            href={CONTACT_MAILTO}
+            href={DEMO_MAILTO}
             className="inline-flex items-center justify-center rounded-md border border-slate-600 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
           >
-            Talk to us
+            Book a 20-min demo
           </a>
         </div>
         <p className="mt-6 text-sm text-slate-400">
-          Live demo available · Multi-tenant ·
-          Branded per institution
+          Live demo available · Multi-tenant · Branded per institution · GDPR-compliant
         </p>
       </div>
     </section>
