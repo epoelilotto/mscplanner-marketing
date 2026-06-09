@@ -1,32 +1,33 @@
 ---
 const PLANNER_URL = "https://ae-planner-proxy.vercel.app";
-const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=StudyPlanner%20Demo%20Request&body=University%20name%3A%0AProgramme%3A%0AYour%20role%3A";
+const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=MSC%20Study%20Planner%20Demo%20Request&body=University%20name%3A%0AProgramme%3A%0AYour%20role%3A";
 ---
 
-<section class="relative overflow-hidden border-b border-indigo-100 bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950">
+<section class="relative overflow-hidden border-b border-slate-800 bg-slate-950">
   <div
     aria-hidden="true"
-    class="pointer-events-none absolute inset-0 opacity-[0.04]"
+    class="pointer-events-none absolute inset-0 opacity-[0.03]"
     style="background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:40px 40px;"
   ></div>
   <div class="relative mx-auto max-w-6xl px-6 pt-24 pb-28 sm:pt-32 sm:pb-36">
-    <div class="mb-6 inline-flex items-center rounded-full border border-indigo-400/50 bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-200">
-      Stop validating study plans by hand.
+    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800/60 px-3 py-1 text-xs font-medium text-slate-300">
+      <span class="h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
+      Live at TU Delft Aerospace Engineering
     </div>
     <h1 class="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-6xl">
-      Valid study plans, <span class="text-indigo-400">every time.</span>
+      Valid study plans, <span class="text-blue-500">every time.</span>
     </h1>
     <p class="mt-6 max-w-2xl text-lg text-slate-300 sm:text-xl">
-      StudyPlanner is an AI-powered MSc study planner that validates student plans against your programme rules in real time — so coordinators stop spending hours fixing invalid plans over email.
+      MSC Study Planner validates student course selections against your programme rules in real time — so coordinators stop spending hours fixing invalid plans over email.
     </p>
     <div class="mt-10 flex flex-wrap items-center gap-4">
       <a
         href={PLANNER_URL}
         target="_blank"
         rel="noreferrer"
-        class="inline-flex items-center justify-center rounded-md bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-900/40 transition hover:bg-indigo-500"
+        class="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/40 transition hover:bg-blue-500"
       >
-        Open the StudyPlanner →
+        Open the planner →
       </a>
       <a
         href={DEMO_MAILTO}
@@ -35,8 +36,8 @@ const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=StudyPlanner
         Book a 20-min demo
       </a>
     </div>
-    <p class="mt-6 text-sm text-slate-400">
-      Live demo available · Multi-tenant · Branded per institution · GDPR-compliant
+    <p class="mt-6 text-sm text-slate-500">
+      Up and running in 2 weeks · No student accounts needed · GDPR by design · EU infrastructure
     </p>
   </div>
 </section>
