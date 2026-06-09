@@ -6,6 +6,26 @@ const metrics = [
   { metric: "5", label: "specialisation tracks" },
   { metric: "< 2 wks", label: "setup to live" },
 ];
+const screens = [
+  {
+    src: "/screenshots/screenshot-1.png",
+    alt: "MSc Study Planner — branded landing page for TU Delft Aerospace Engineering",
+    number: "01",
+    title: "Branded per institution",
+  },
+  {
+    src: "/screenshots/screenshot-2.png",
+    alt: "Track selection — choose your specialisation",
+    number: "02",
+    title: "Pick track and profile",
+  },
+  {
+    src: "/screenshots/screenshot-3.png",
+    alt: "Full study plan grid with live validation and AI recommendations",
+    number: "03",
+    title: "Live validation + AI",
+  },
+];
 ---
 
 <section class="border-b border-slate-200 bg-white">
@@ -48,6 +68,25 @@ const metrics = [
           Book a demo for your programme
         </a>
       </div>
+
+      <!-- Screenshots: 3-column thumbnails -->
+      <div class="mt-10 border-t border-slate-200 pt-8 grid grid-cols-1 gap-5 sm:grid-cols-3">
+        {screens.map((s) => (
+          <div>
+            <p class="mb-2 text-xs font-bold uppercase tracking-widest text-blue-600">{s.number} — {s.title}</p>
+            <div class="overflow-hidden rounded-lg border border-slate-200 shadow-sm">
+              <img
+                src={s.src}
+                alt={s.alt}
+                class="w-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+
     </div>
   </div>
 </section>
