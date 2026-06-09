@@ -7,6 +7,16 @@ const stats = [
   { value: "< 2 weeks", label: "to go live at your university" },
   { value: "0", label: "invalid plans after deployment" },
 ];
+
+const tiles = [
+  { course: "Fluid Mechanics", ec: "5 EC", valid: true, style: "top-12 left-8 rotate-[-3deg] delay-0" },
+  { course: "Machine Learning", ec: "5 EC", valid: true, style: "top-4 left-52 rotate-[2deg] delay-1" },
+  { course: "Control Theory", ec: "5 EC", valid: true, style: "top-36 left-28 rotate-[-1deg] delay-2" },
+  { course: "Thermodynamics", ec: "4 EC", valid: true, style: "top-28 left-72 rotate-[3deg] delay-3" },
+  { course: "Structural Mech.", ec: "5 EC", valid: true, style: "top-56 left-6 rotate-[1deg] delay-4" },
+  { course: "Data Engineering", ec: "5 EC", valid: true, style: "top-64 left-56 rotate-[-2deg] delay-5" },
+  { course: "Research Project", ec: "10 EC", valid: true, style: "top-80 left-24 rotate-[2deg] delay-6" },
+];
 ---
 
 <section class="relative overflow-hidden border-b border-slate-800 bg-slate-950">
@@ -15,47 +25,95 @@ const stats = [
     class="pointer-events-none absolute inset-0 opacity-[0.03]"
     style="background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:40px 40px;"
   ></div>
+
   <div class="relative mx-auto max-w-6xl px-6 pt-24 pb-16 sm:pt-32 sm:pb-20">
+    <div class="grid gap-16 lg:grid-cols-2 lg:items-center">
 
-    <!-- Title + description + CTAs -->
-    <h1 class="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-6xl">
-      Valid study plans, <span class="text-blue-500">every time.</span>
-    </h1>
-    <p class="mt-6 max-w-2xl text-lg text-slate-300 sm:text-xl">
-      MSC Study Planner validates student course selections against your programme rules in real time — so coordinators stop spending hours fixing invalid plans over email.
-    </p>
-    <div class="mt-10 flex flex-wrap items-center gap-4">
-      <a
-        href={PLANNER_URL}
-        target="_blank"
-        rel="noreferrer"
-        class="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/40 transition hover:bg-blue-500"
-      >
-        Open the planner →
-      </a>
-      <a
-        href={DEMO_MAILTO}
-        class="inline-flex items-center justify-center rounded-md border border-slate-600 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
-      >
-        Book a 20-min demo
-      </a>
-    </div>
-    <p class="mt-6 text-sm text-slate-500">
-      Up and running in 2 weeks · No student accounts needed · GDPR by design · EU infrastructure
-    </p>
-
-    <!-- Stats merged into hero -->
-    <div class="mt-16 border-t border-slate-800 pt-12 grid gap-8 sm:grid-cols-3">
-      {stats.map((s) => (
-        <div class="text-center">
-          <p class="text-4xl font-bold tracking-tight text-blue-500">{s.value}</p>
-          <p class="mt-2 text-sm font-medium text-slate-300">{s.label}</p>
+      <!-- Left: headline + CTAs + stats -->
+      <div>
+        <h1 class="max-w-xl text-4xl font-semibold tracking-tight text-white sm:text-6xl">
+          Valid study plans, <span class="text-blue-500">every time.</span>
+        </h1>
+        <p class="mt-6 max-w-lg text-lg text-slate-300 sm:text-xl">
+          MSC Study Planner validates student course selections against your programme rules in real time — so coordinators stop spending hours fixing invalid plans over email.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a
+            href={PLANNER_URL}
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/40 transition hover:bg-blue-500"
+          >
+            Open the planner →
+          </a>
+          <a
+            href={DEMO_MAILTO}
+            class="inline-flex items-center justify-center rounded-md border border-slate-600 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
+          >
+            Book a 20-min demo
+          </a>
         </div>
-      ))}
-    </div>
-    <p class="mt-6 text-center text-xs text-slate-600">
-      Based on TU Delft Aerospace Engineering pilot · estimates subject to programme complexity
-    </p>
+        <p class="mt-6 text-sm text-slate-500">
+          Up and running in 2 weeks · No student accounts needed · GDPR by design · EU infrastructure
+        </p>
 
+        <!-- Stats -->
+        <div class="mt-16 border-t border-slate-800 pt-12 grid gap-8 sm:grid-cols-3">
+          {stats.map((s) => (
+            <div class="text-center">
+              <p class="text-4xl font-bold tracking-tight text-blue-500">{s.value}</p>
+              <p class="mt-2 text-sm font-medium text-slate-300">{s.label}</p>
+            </div>
+          ))}
+        </div>
+        <p class="mt-6 text-center text-xs text-slate-600">
+          Based on TU Delft Aerospace Engineering pilot · estimates subject to programme complexity
+        </p>
+      </div>
+
+      <!-- Right: floating course tiles -->
+      <div class="relative hidden h-[460px] lg:block" aria-hidden="true">
+        {tiles.map((t, i) => (
+          <div
+            class={`tile absolute flex w-52 items-center gap-3 rounded-xl border border-slate-700 bg-slate-800/80 px-4 py-3 shadow-xl backdrop-blur ${t.style}`}
+            style={`animation-delay: ${i * 0.7}s`}
+          >
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xs text-white font-bold">✓</span>
+            <div class="min-w-0">
+              <p class="truncate text-sm font-semibold text-white">{t.course}</p>
+              <p class="text-xs text-slate-400">{t.ec} · Valid</p>
+            </div>
+          </div>
+        ))}
+
+        <!-- Summary badge at bottom -->
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full border border-blue-500/40 bg-blue-600/10 px-5 py-2 text-sm font-semibold text-blue-400 shadow-lg">
+          <span>✓</span> Study plan valid — 35 / 35 EC
+        </div>
+
+        <!-- Soft fade at edges -->
+        <div class="pointer-events-none absolute inset-0 rounded-2xl" style="background: radial-gradient(ellipse at 80% 50%, transparent 40%, rgb(2 6 23) 85%);"></div>
+      </div>
+
+    </div>
   </div>
 </section>
+
+<style>
+  .tile {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(var(--tw-rotate, 0deg)); }
+    50%       { transform: translateY(-10px) rotate(var(--tw-rotate, 0deg)); }
+  }
+
+  .delay-0 { animation-delay: 0s; }
+  .delay-1 { animation-delay: 0.7s; }
+  .delay-2 { animation-delay: 1.4s; }
+  .delay-3 { animation-delay: 2.1s; }
+  .delay-4 { animation-delay: 2.8s; }
+  .delay-5 { animation-delay: 3.5s; }
+  .delay-6 { animation-delay: 4.2s; }
+</style>
