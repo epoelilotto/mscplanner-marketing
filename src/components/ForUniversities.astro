@@ -37,26 +37,26 @@ const demoSteps = [
       Book a 20-min demo
     </a>
 
-    <!-- What happens in the call -->
-    <div class="mt-10 mx-auto max-w-sm text-left rounded-lg border border-slate-700 bg-slate-800/40 px-5 py-4">
-      <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">What happens in the 20 minutes</p>
-      <ul class="mt-3 space-y-2">
-        {demoSteps.map((step) => (
-          <li class="flex items-start gap-2 text-sm text-slate-300">
-            <span class="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">✓</span>
-            {step}
-          </li>
-        ))}
-      </ul>
-    </div>
-
-    <!-- GDPR -->
-    <div class="mt-4 mx-auto max-w-sm text-left rounded-lg border border-slate-700 bg-slate-800/40 px-5 py-4">
-      <p class="text-xs font-semibold uppercase tracking-wide text-blue-400">Data &amp; Privacy</p>
-      <p class="mt-1 text-sm text-slate-300">
-        Plans stored locally by default. All shared data on EU infrastructure. Never used for training.
-        <span class="font-medium text-white">GDPR-compliant by design.</span>
-      </p>
+    <!-- What happens + GDPR side by side -->
+    <div class="mt-10 mx-auto max-w-2xl grid grid-cols-1 gap-4 sm:grid-cols-2 text-left">
+      <div class="rounded-lg border border-slate-700 bg-slate-800/40 px-5 py-4">
+        <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">What happens in the 20 minutes</p>
+        <ul class="mt-3 space-y-2">
+          {demoSteps.map((step) => (
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <span class="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">✓</span>
+              {step}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="rounded-lg border border-slate-700 bg-slate-800/40 px-5 py-4">
+        <p class="text-xs font-semibold uppercase tracking-wide text-blue-400">Data &amp; Privacy</p>
+        <p class="mt-1 text-sm text-slate-300">
+          Plans stored locally by default. All shared data on EU infrastructure. Never used for training.
+          <span class="font-medium text-white">GDPR-compliant by design.</span>
+        </p>
+      </div>
     </div>
 
     <!-- Testimonial placeholder — uncomment and fill in when first coordinator quote is received
