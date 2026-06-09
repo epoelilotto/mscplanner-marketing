@@ -1,6 +1,12 @@
 ---
 const PLANNER_URL = "https://ae-planner-proxy.vercel.app";
 const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=MSC%20Study%20Planner%20Demo%20Request&body=University%20name%3A%0AProgramme%3A%0AYour%20role%3A";
+
+const stats = [
+  { value: "~2 hrs", label: "saved per student per year" },
+  { value: "< 2 weeks", label: "to go live at your university" },
+  { value: "0", label: "invalid plans after deployment" },
+];
 ---
 
 <section class="relative overflow-hidden border-b border-slate-800 bg-slate-950">
@@ -9,7 +15,9 @@ const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=MSC%20Study%
     class="pointer-events-none absolute inset-0 opacity-[0.03]"
     style="background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:40px 40px;"
   ></div>
-  <div class="relative mx-auto max-w-6xl px-6 pt-24 pb-28 sm:pt-32 sm:pb-36">
+  <div class="relative mx-auto max-w-6xl px-6 pt-24 pb-16 sm:pt-32 sm:pb-20">
+
+    <!-- Title + description + CTAs -->
     <h1 class="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-6xl">
       Valid study plans, <span class="text-blue-500">every time.</span>
     </h1>
@@ -27,7 +35,7 @@ const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=MSC%20Study%
       </a>
       <a
         href={DEMO_MAILTO}
-        class="inline-flex items-center justify-center rounded-md border border-slate-600 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
+        class="inline-flex items-center justify-center rounded-md border border-slate-500 bg-white px-6 py-3 text-sm font-bold text-slate-900 transition hover:bg-slate-100"
       >
         Book a 20-min demo
       </a>
@@ -35,5 +43,19 @@ const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=MSC%20Study%
     <p class="mt-6 text-sm text-slate-500">
       Up and running in 2 weeks · No student accounts needed · GDPR by design · EU infrastructure
     </p>
+
+    <!-- Stats merged into hero -->
+    <div class="mt-16 border-t border-slate-800 pt-12 grid gap-8 sm:grid-cols-3">
+      {stats.map((s) => (
+        <div class="text-center">
+          <p class="text-4xl font-bold tracking-tight text-blue-500">{s.value}</p>
+          <p class="mt-2 text-sm font-medium text-slate-300">{s.label}</p>
+        </div>
+      ))}
+    </div>
+    <p class="mt-6 text-center text-xs text-slate-600">
+      Based on TU Delft Aerospace Engineering pilot · estimates subject to programme complexity
+    </p>
+
   </div>
 </section>
