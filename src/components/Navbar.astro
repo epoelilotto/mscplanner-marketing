@@ -1,6 +1,6 @@
 ---
 const PLANNER_URL = "https://ae-planner-proxy.vercel.app";
-const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=MSC%20Study%20Planner%20Demo%20Request&body=University%20name%3A%0AProgramme%3A%0AYour%20role%3A";
+const DEMO_LINK = "https://cal.com/elisamscplanner/20min";
 const navLinks = [
   { href: "/#how-it-works", label: "How it works" },
   { href: PLANNER_URL, label: "Demo", external: true },
@@ -40,7 +40,9 @@ const navLinks = [
 
     <!-- Desktop CTA: white background, black bold text -->
     <a
-      href={DEMO_MAILTO}
+      href={DEMO_LINK}
+      target="_blank"
+      rel="noreferrer"
       class="hidden md:inline-flex items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow shadow-blue-900/50 transition hover:bg-blue-500"
     >
       Book a demo
@@ -71,7 +73,9 @@ const navLinks = [
       </a>
     ))}
     <a
-      href={DEMO_MAILTO}
+      href={DEMO_LINK}
+      target="_blank"
+      rel="noreferrer"
       class="mt-3 block rounded-md bg-blue-600 px-4 py-3 text-center text-sm font-semibold text-white hover:bg-blue-500"
     >
       Book a demo

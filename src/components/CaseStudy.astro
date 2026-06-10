@@ -1,6 +1,6 @@
 ---
 const PLANNER_URL = "https://ae-planner-proxy.vercel.app";
-const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=MSC%20Study%20Planner%20Demo%20Request&body=University%20name%3A%0AProgramme%3A%0AYour%20role%3A";
+const DEMO_LINK = "https://cal.com/elisamscplanner/20min";
 const metrics = [
   { metric: "180+", label: "courses encoded" },
   { metric: "5", label: "specialisation tracks" },
@@ -62,7 +62,9 @@ const screens = [
           See the live planner →
         </a>
         <a
-          href={DEMO_MAILTO}
+          href={DEMO_LINK}
+          target="_blank"
+          rel="noreferrer"
           class="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-blue-400 hover:text-blue-600"
         >
           Book a demo for your programme

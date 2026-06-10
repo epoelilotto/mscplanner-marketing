@@ -1,5 +1,7 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+# MSc Study Planner — Marketing Site
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+Astro static site styled with Tailwind CSS.
+
+- Pages: `src/pages/` (e.g. `index.astro`, `contact.astro`)
+- Components: `src/components/`
+- Layouts: `src/layouts/`

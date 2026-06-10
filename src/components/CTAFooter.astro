@@ -1,6 +1,6 @@
 ---
 const PLANNER_URL = "https://ae-planner-proxy.vercel.app";
-const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=MSC%20Study%20Planner%20Demo%20Request&body=University%20name%3A%0AProgramme%3A%0AYour%20role%3A";
+const DEMO_LINK = "https://cal.com/elisamscplanner/20min";
 ---
 
 <section class="bg-slate-950">
@@ -14,7 +14,9 @@ const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=MSC%20Study%
     </p>
     <div class="mt-10 flex flex-wrap justify-center gap-4">
       <a
-        href={DEMO_MAILTO}
+        href={DEMO_LINK}
+        target="_blank"
+        rel="noreferrer"
         class="inline-flex items-center justify-center rounded-md bg-blue-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-950 transition hover:bg-blue-500"
       >
         Book a 20-min demo

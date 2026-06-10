@@ -3,7 +3,7 @@ import Base from "../layouts/Base.astro";
 import Navbar from "../components/Navbar.astro";
 
 const PLANNER_URL = "https://ae-planner-proxy.vercel.app";
-const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=StudyPlanner%20Demo%20Request&body=University%20name%3A%0AProgramme%3A%0AYour%20role%3A";
+const DEMO_LINK = "https://cal.com/elisamscplanner/20min";
 
 const blocks = [
   {
@@ -17,14 +17,14 @@ const blocks = [
 ];
 ---
 
-<Base title="Contact — StudyPlanner" description="Get in touch to bring StudyPlanner to your university. Twenty-minute call, no commitment.">
+<Base title="Contact — MSc Study Planner" description="Get in touch to bring MSc Study Planner to your university. Twenty-minute call, no commitment.">
   <Navbar />
   <main class="flex-1">
     <div class="min-h-screen bg-indigo-950">
       <div class="mx-auto max-w-3xl px-6 py-24 sm:py-32">
         <div class="mb-8 h-1 w-16 rounded-full bg-indigo-500"></div>
         <h1 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-          Bring StudyPlanner to your university.
+          Bring MSc Study Planner to your university.
         </h1>
         <p class="mt-6 text-lg text-slate-200">
           Twenty-minute call. We'll walk through the live demo, show how the multi-tenant setup works, and scope what it would take for your programme.
@@ -48,7 +48,9 @@ const blocks = [
         </div>
         <div class="mt-12 flex flex-wrap gap-4">
           <a
-            href={DEMO_MAILTO}
+            href={DEMO_LINK}
+            target="_blank"
+            rel="noreferrer"
             class="inline-flex items-center justify-center rounded-md bg-indigo-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-950 transition hover:bg-indigo-500"
           >
             Book a 20-min demo
@@ -64,8 +66,8 @@ const blocks = [
         </div>
         <p class="mt-8 text-sm text-slate-400">
           Or email directly:{" "}
-          <a href={DEMO_MAILTO} class="underline underline-offset-2 hover:text-slate-200">
-            alessandromiccolo2003@gmail.com
+          <a href="mailto:alessandro@mscplanner.com" class="underline underline-offset-2 hover:text-slate-200">
+            alessandro@mscplanner.com
           </a>
         </p>
       </div>

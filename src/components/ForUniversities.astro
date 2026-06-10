@@ -1,5 +1,5 @@
 ---
-const DEMO_MAILTO = "mailto:alessandromiccolo2003@gmail.com?subject=MSC%20Study%20Planner%20Demo%20Request&body=University%20name%3A%0AProgramme%3A%0AYour%20role%3A";
+const DEMO_LINK = "https://cal.com/elisamscplanner/20min";
 
 const points = [
   { title: "Branded for your institution", body: "Your own catalogue, rules, branding, and subdomain." },
@@ -31,7 +31,9 @@ const demoSteps = [
 
     <!-- CTA -->
     <a
-      href={DEMO_MAILTO}
+      href={DEMO_LINK}
+      target="_blank"
+      rel="noreferrer"
       class="mt-10 inline-flex items-center justify-center rounded-md bg-blue-600 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/50 transition hover:bg-blue-500"
     >
       Book a 20-min demo
