@@ -80,7 +80,7 @@ const screens = [
               <img
                 src={s.src}
                 alt={s.alt}
-                class="w-full object-cover"
+                class={`w-full object-cover ${i !== 2 ? "scale-[1.2]" : ""}`}
                 loading="lazy"
                 decoding="async"
               />
