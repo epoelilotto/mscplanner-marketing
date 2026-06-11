@@ -71,10 +71,10 @@ const screens = [
         </a>
       </div>
 
-      <!-- Screenshots: 3-column thumbnails -->
-      <div class="mt-10 border-t border-slate-200 pt-8 grid grid-cols-1 gap-5 sm:grid-cols-3">
-        {screens.map((s) => (
-          <div>
+      <!-- Screenshots: 01/02 side by side, 03 (live validation + AI) full width and larger -->
+      <div class="mt-10 border-t border-slate-200 pt-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
+        {screens.map((s, i) => (
+          <div class={i === 2 ? "sm:col-span-2" : ""}>
             <p class="mb-2 text-xs font-bold uppercase tracking-widest text-blue-600">{s.number} — {s.title}</p>
             <div class="overflow-hidden rounded-lg border border-slate-200 shadow-sm">
               <img

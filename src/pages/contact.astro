@@ -20,9 +20,9 @@ const blocks = [
 <Base title="Contact — MSc Study Planner" description="Get in touch to bring MSc Study Planner to your university. Twenty-minute call, no commitment.">
   <Navbar />
   <main class="flex-1">
-    <div class="min-h-screen bg-indigo-950">
+    <div class="min-h-screen bg-slate-950">
       <div class="mx-auto max-w-3xl px-6 py-24 sm:py-32">
-        <div class="mb-8 h-1 w-16 rounded-full bg-indigo-500"></div>
+        <div class="mb-8 h-1 w-16 rounded-full bg-blue-600"></div>
         <h1 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
           Bring MSc Study Planner to your university.
         </h1>
@@ -31,13 +31,13 @@ const blocks = [
         </p>
         <div class="mt-12 grid gap-6 sm:grid-cols-2">
           {blocks.map((block) => (
-            <div class="rounded-xl border border-indigo-800 bg-indigo-900/60 p-6">
-              <h2 class="font-semibold text-indigo-100 mb-4">{block.title}</h2>
+            <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-6">
+              <h2 class="font-semibold text-white mb-4">{block.title}</h2>
               <ul class="space-y-2">
                 {block.items.map((item) => (
                   <li class="flex items-start gap-2 text-sm text-slate-300">
-                    <span class="mt-0.5 h-4 w-4 shrink-0 rounded-full bg-indigo-500/30 flex items-center justify-center">
-                      <span class="h-1.5 w-1.5 rounded-full bg-indigo-400"></span>
+                    <span class="mt-0.5 h-4 w-4 shrink-0 rounded-full bg-blue-600/30 flex items-center justify-center">
+                      <span class="h-1.5 w-1.5 rounded-full bg-blue-400"></span>
                     </span>
                     {item}
                   </li>
@@ -51,7 +51,7 @@ const blocks = [
             href={DEMO_LINK}
             target="_blank"
             rel="noreferrer"
-            class="inline-flex items-center justify-center rounded-md bg-indigo-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-950 transition hover:bg-indigo-500"
+            class="inline-flex items-center justify-center rounded-md bg-blue-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-950 transition hover:bg-blue-500"
           >
             Book a 20-min demo
           </a>
@@ -59,7 +59,7 @@ const blocks = [
             href={PLANNER_URL}
             target="_blank"
             rel="noreferrer"
-            class="inline-flex items-center justify-center rounded-md border border-slate-700 px-8 py-3 text-sm font-semibold text-white transition hover:border-indigo-500 hover:text-indigo-300"
+            class="inline-flex items-center justify-center rounded-md border border-slate-700 px-8 py-3 text-sm font-semibold text-white transition hover:border-blue-500 hover:text-blue-400"
           >
             Try the planner first →
           </a>
