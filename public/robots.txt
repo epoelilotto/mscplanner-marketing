@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://studyplanner-marketing.vercel.app/sitemap.xml
+Sitemap: https://msc-planner.vercel.app/sitemap-index.xml
