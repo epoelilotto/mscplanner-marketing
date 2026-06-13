@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
 import Analytics from "@vercel/analytics/astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 const { title = "MSc Study Planner — AI study planning for universities", description = "An AI-powered MSc study planner that validates student plans in real time and saves coordinators hours of email back-and-forth. Branded per institution, GDPR-compliant." } = Astro.props;
@@ -31,6 +32,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body class="min-h-full flex flex-col bg-white text-slate-900">
     <slot />
+    <Footer />
     <Analytics />
     <SpeedInsights />
   </body>
