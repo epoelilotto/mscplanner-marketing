@@ -2,24 +2,27 @@
 const screens = [
   {
     src: "/screenshots/screenshot-1.png",
+    webp: "/screenshots/screenshot-1.webp",
     alt: "StudyPlanner onboarding — MSc Aerospace Engineering landing page",
     number: "01",
     title: "Branded per institution",
     caption: "Students land on a programme-specific page. The planner loads the right catalogue, tracks, and rules automatically — no configuration needed on the student side.",
     width: 1440,
-    height: 900,
+    height: 934,
   },
   {
     src: "/screenshots/screenshot-2.png",
+    webp: "/screenshots/screenshot-2.webp",
     alt: "Track selection — choose your specialisation",
     number: "02",
     title: "Pick track and profile",
     caption: "Step 1: the student picks their specialisation. Mandatory courses pre-load instantly. The profile panel on the right shows sub-tracks to narrow elective recommendations.",
     width: 1440,
-    height: 900,
+    height: 934,
   },
   {
     src: "/screenshots/screenshot-3.png",
+    webp: "/screenshots/screenshot-3.webp",
     alt: "Full study plan grid with validation and AI recommendations",
     number: "03",
     title: "Full plan — live validation + AI",
@@ -41,15 +44,18 @@ const screens = [
             <p class="mt-2 text-sm leading-relaxed text-slate-500">{s.caption}</p>
           </figcaption>
           <div class="overflow-hidden rounded-xl border border-slate-200 shadow-md">
-            <img
-              src={s.src}
-              alt={s.alt}
-              width={s.width}
-              height={s.height}
-              class="w-full"
-              loading={i === 0 ? "eager" : "lazy"}
-              decoding={i === 0 ? "sync" : "async"}
-            />
+            <picture>
+              <source srcset={s.webp} type="image/webp" />
+              <img
+                src={s.src}
+                alt={s.alt}
+                width={s.width}
+                height={s.height}
+                class="w-full"
+                loading={i === 0 ? "eager" : "lazy"}
+                decoding={i === 0 ? "sync" : "async"}
+              />
+            </picture>
           </div>
         </figure>
       ))}

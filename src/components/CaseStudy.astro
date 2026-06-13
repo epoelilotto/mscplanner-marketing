@@ -9,21 +9,30 @@ const metrics = [
 const screens = [
   {
     src: "/screenshots/screenshot-1.png",
+    webp: "/screenshots/screenshot-1.webp",
     alt: "MSc Study Planner — branded landing page for TU Delft Aerospace Engineering",
     number: "01",
     title: "Branded per institution",
+    width: 1440,
+    height: 934,
   },
   {
     src: "/screenshots/screenshot-2.png",
+    webp: "/screenshots/screenshot-2.webp",
     alt: "Track selection — choose your specialisation",
     number: "02",
     title: "Pick track and profile",
+    width: 1440,
+    height: 934,
   },
   {
     src: "/screenshots/screenshot-3.png",
+    webp: "/screenshots/screenshot-3.webp",
     alt: "Full study plan grid with live validation and AI recommendations",
     number: "03",
     title: "Live validation + AI",
+    width: 1440,
+    height: 1153,
   },
 ];
 ---
@@ -77,13 +86,18 @@ const screens = [
           <div class={i === 2 ? "sm:col-span-2" : ""}>
             <p class="mb-2 text-xs font-bold uppercase tracking-widest text-blue-600">{s.number} — {s.title}</p>
             <div class="overflow-hidden rounded-lg border border-slate-200 shadow-sm">
-              <img
-                src={s.src}
-                alt={s.alt}
-                class={`w-full object-cover ${i !== 2 ? "scale-[1.2]" : ""}`}
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source srcset={s.webp} type="image/webp" />
+                <img
+                  src={s.src}
+                  alt={s.alt}
+                  width={s.width}
+                  height={s.height}
+                  class={`w-full object-cover ${i !== 2 ? "scale-[1.2]" : ""}`}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </div>
         ))}
